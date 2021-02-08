@@ -27,12 +27,13 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly available, in addition to filtering access to the network.
 
-    • Load balancing ensures that the application will be highly available and adds resiliency by distributing
-      live traffic evenly across multiple servers, effectively eliminating single points of failure from attacks
-      such as DDoS attacks.
+    • Load balancing ensures that the application will be highly available and adds resiliency by
+      distributing live traffic evenly across multiple servers, effectively eliminating single points
+      of failure from attacks such as DDoS attacks.
 
-    • The advantage of the Jump Box is that it provides a gateway router to the private network, ensuring that
-      all other machines in the network do not directly face the internet, providing a more secure network.
+    • The advantage of the Jump Box is that it provides a gateway router to the private network,
+      ensuring that all other machines in the network do not directly face the internet, providing
+      a more secure network.
           
           
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the network and system logs.
@@ -74,7 +75,7 @@ Machines within the network can only be accessed by the Jump Box.
     
     • The ELK server may be accessed from Web-2 DVWA // 10.0.0.6  
     
-    • The ELK server may be accessed from Web-3 DVWA // 10.0.0.7                                                 
+    • The ELK server may be accessed from Web-3 DVWA // 10.0.0.7  
 
 
 A summary of the access policies in place can be found in the table below.
@@ -91,9 +92,10 @@ A summary of the access policies in place can be found in the table below.
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
 
-    • Automating configuration with ansible ensures provisioning scripts run identically everywhere, every
-      time they run. This eliminates as much variability between configurations as possible, and allows for
-      easy installation of multiple versions of a tool(s) to be used at the same time accross different projects.
+    • Automating configuration with ansible ensures provisioning scripts run identically everywhere,
+      every time they run. This eliminates as much variability between configurations as possible,
+      and allows for easy installation of multiple versions of a tool(s) to be used at the same time
+      accross different projects.
 
 The playbook implements the following tasks:
 
