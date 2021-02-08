@@ -144,29 +144,26 @@ In order to use the playbook, you will need to have an Ansible control node alre
 
 SSH into the control node and follow the steps below:
 
-    • Copy the YAML file to the '/etc/ansible/' directory.
+     • Copy the ansible, filebeat and metricbeat configuration files to '/etc/ansible'
+     
+     • Update the config files to include your ELK-SERVER's private IP address: 
+       (filebeat-config.yml: lines 1106 & 1806, metricbeat-config.yml: lines 62 & 96)
+      
+     • /etc/ansible/install-elk.yml is the ELK playbook. Copy it to '/etc/ansible'
 
-    • Update the '/etc/ansible/hosts' inventory file to include: 
+     • /etc/ansible/filebeat-playbook.yml is the filebeat playbook. Copy it to '/etc/ansible'
 
-       [Group] - (e.g. [webservers] // [elk])
+     • /etc/ansible/metricbeat-playbook.yml is the metricbeat playbook. Copy it to '/etc/ansible'
 
-       [Private IP addresses of webservers] [location of a Python 3 interpreter] -
-       (e.g. 'x.x.x.x ansible_python_interpreter=/usr/bin/python3')
+     • To make Ansible run the playbook on a specific machine(s), update the '/etc/ansible/hosts' inventory file to include: 
 
-    • The 'hosts' field in the Ansible playbook can be edited to specify which machines to run a set of
-      tasks against.
+          [Group name]
+          
+            e.g. [webservers] // [elk]
 
-    • Run the playbook, and navigate to 'http://[your.ELK-VM.External.IP]:5601/app/kibana' to check that
-      the installation worked as expected.
+          [Private IP addresses of webservers] [location of a Python 3 interpreter]
+          
+            e.g. 'x.x.x.x ansible_python_interpreter=/usr/bin/python3'
 
-To deploy the ELK Stack, Filebeat, and Metricbeat, run the following commands:
-   
-    cd /etc/ansible
-    
-    ansible-playbook install-elk.yml
-    
-    ansible-playbook filebeat-playbook.yml
-    
-    Ansible-playbook metricbeat-playbook.yml
-    
 Run the playbook, then navigate to 'http://[your.ELK-VM.External.IP]:5601/app/kibana' to check that the installation worked as expected.
+
