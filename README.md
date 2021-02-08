@@ -40,9 +40,9 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
     • Filebeat monitors the log files or locations that you specify, collects log events, and forwards them either to 
       Elasticsearch or Logstash for indexing. The data can be viewed and analyzed with Kibana.
 
-    • Metricbeat collects metrics from the operating system and from services running on the server. Metricbeat then takes the
-      metrics and statistics that it collects and ships them to Elasticsearch to be processed by Logstash, and can be viewed
-      and analyzed with Kibana.
+    • Metricbeat collects metrics from the operating system and from services running on the server. Metricbeat then
+      takes the metrics and statistics that it collects and ships them to Elasticsearch to be processed by Logstash,
+      and can be viewed and analyzed with Kibana.
 
 
 The configuration details of each machine may be found below.
@@ -110,7 +110,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
+https://github.com/Jesse-Mendoza/Automated-Elk-Stack-Deployment/blob/main/Docker_ps_output.png
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -144,7 +144,7 @@ SSH into the control node and follow the steps below:
 
     • Update the '/etc/ansible/hosts' inventory file to include: 
 
-       [Group] - (e.g. [webservers] | [elk])
+       [Group] - (e.g. [webservers] // [elk])
 
        [Private IP addresses of webservers] [location of a Python 3 interpreter] -
        (e.g. 'x.x.x.x ansible_python_interpreter=/usr/bin/python3')
@@ -164,4 +164,4 @@ To deploy the ELK Stack, Filebeat, and Metricbeat, run the following commands:
     
     Ansible-playbook metricbeat-playbook.yml
     
-Run the playbook, and navigate to 'http://[your.ELK-VM.External.IP]:5601/app/kibana' to check that the installation worked as expected.
+Run the playbook, then navigate to 'http://[your.ELK-VM.External.IP]:5601/app/kibana' to check that the installation worked as expected.
