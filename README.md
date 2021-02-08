@@ -144,16 +144,16 @@ In order to use the playbook, you will need to have an Ansible control node alre
 
 SSH into the control node and follow the steps below:
 
-     • Copy the ansible, filebeat and metricbeat configuration files to '/etc/ansible'
+     • Copy the Filebeat and Metricbeat configuration files to '/etc/ansible'
      
-     • Update the config files to include your ELK-SERVER's private IP address: 
+     • Update the configuration files to include your ELK-SERVER's private IP address: 
        (filebeat-config.yml: lines 1106 & 1806, metricbeat-config.yml: lines 62 & 96)
       
-     • /etc/ansible/install-elk.yml is the ELK playbook. Copy it to '/etc/ansible'
+     • /etc/ansible/install-elk.yml is the ELK deployment playbook. Copy it to '/etc/ansible'
 
-     • /etc/ansible/filebeat-playbook.yml is the filebeat playbook. Copy it to '/etc/ansible'
+     • /etc/ansible/filebeat-playbook.yml is the Filebeat playbook. Copy it to '/etc/ansible'
 
-     • /etc/ansible/metricbeat-playbook.yml is the metricbeat playbook. Copy it to '/etc/ansible'
+     • /etc/ansible/metricbeat-playbook.yml is the Metricbeat playbook. Copy it to '/etc/ansible'
 
      • To make Ansible run the playbook on a specific machine(s), update the '/etc/ansible/hosts' inventory file to include: 
 
@@ -164,6 +164,8 @@ SSH into the control node and follow the steps below:
           [Private IP addresses of webservers] [location of a Python 3 interpreter]
           
             e.g. 'x.x.x.x ansible_python_interpreter=/usr/bin/python3'
+            
+     • Command to run playbook: ansible-playbook [playbook.yml] 
 
-Run the playbook, then navigate to 'http://[your.ELK-VM.External.IP]:5601/app/kibana' to check that the installation worked as expected.
+Run each playbook, then navigate to http://[your.ELK-VM.External.IP]:5601/app/kibana to check that the installation worked as expected.
 
