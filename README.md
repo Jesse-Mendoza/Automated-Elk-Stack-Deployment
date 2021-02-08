@@ -164,4 +164,4 @@ To deploy the ELK Stack, Filebeat, and Metricbeat, run the following commands:
     
     Ansible-playbook metricbeat-playbook.yml
     
-Run the playbook, and navigate to 'http://[your.ELK-VM.External.IP]:5601/app/kibana' to check that the installation worked as expected.
+Run the playbook, then navigate to 'http://[your.ELK-VM.External.IP]:5601/app/kibana' to check that the installation worked as expected.
