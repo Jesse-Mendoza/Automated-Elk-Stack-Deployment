@@ -6,7 +6,7 @@ https://github.com/Jesse-Mendoza/Automated-Elk-Stack-Deployment/blob/main/Diagra
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the Project 1 Red-Team Network Diagram file may be used to install only certain pieces of it, such as Filebeat.
 
-  - _TODO: Enter the playbook file._
+https://github.com/Jesse-Mendoza/Automated-Elk-Stack-Deployment/tree/main/Ansible
 
 This document contains the following details:
 
