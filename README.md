@@ -144,7 +144,7 @@ SSH into the control node and follow the steps below:
 
     • Update the '/etc/ansible/hosts' inventory file to include: 
 
-       [Group] - (e.g. [webservers] | [elk])
+       [Group] - (e.g. [webservers] // [elk])
 
        [Private IP addresses of webservers] [location of a Python 3 interpreter] -
        (e.g. 'x.x.x.x ansible_python_interpreter=/usr/bin/python3')
