@@ -27,22 +27,22 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly available, in addition to filtering access to the network.
 
-    • Load balancing ensures that the application will be highly available and adds resiliency by distributing live 
-      traffic evenly across multiple servers, effectively eliminating single points of failure from attacks such as 
-      DDoS attacks
+    • Load balancing ensures that the application will be highly available and adds resiliency by distributing
+      live traffic evenly across multiple servers, effectively eliminating single points of failure from attacks
+      such as DDoS attacks.
 
-    • The advantage of the Jump Box is that it provides a gateway router to the private network, ensuring that all 
-      other machines in the network do not directly face the internet, providing a more secure network.
+    • The advantage of the Jump Box is that it provides a gateway router to the private network, ensuring that
+      all other machines in the network do not directly face the internet, providing a more secure network.
           
           
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the network and system logs.
 
-    • Filebeat monitors the log files or locations that you specify, collects log events, and forwards them either to 
-      Elasticsearch or Logstash for indexing. The data can be viewed and analyzed with Kibana.
+    • Filebeat monitors the log files or locations that you specify, collects log events, and forwards them
+      either to Elasticsearch or Logstash for indexing. The data can be viewed and analyzed with Kibana.
 
-    • Metricbeat collects metrics from the operating system and from services running on the server. Metricbeat then
-      takes the metrics and statistics that it collects and ships them to Elasticsearch to be processed by Logstash,
-      and can be viewed and analyzed with Kibana.
+    • Metricbeat collects metrics from the operating system and from services running on the server.
+      Metricbeat then takes the metrics and statistics that it collects and ships them to Elasticsearch to be
+      processed by Logstash, and can be viewed and analyzed with Kibana.
 
 
 The configuration details of each machine may be found below.
@@ -91,9 +91,9 @@ A summary of the access policies in place can be found in the table below.
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
 
-    • Automating configuration with ansible ensures provisioning scripts run identically everywhere, every time they run.
-      This eliminates as much variability between configurations as possible, and allows for easy installation of multiple
-      versions of a tool(s) to be used at the same time accross different projects.
+    • Automating configuration with ansible ensures provisioning scripts run identically everywhere, every
+      time they run. This eliminates as much variability between configurations as possible, and allows for
+      easy installation of multiple versions of a tool(s) to be used at the same time accross different projects.
 
 The playbook implements the following tasks:
 
@@ -129,11 +129,13 @@ We have installed the following Beats on these machines:
 
 These Beats allow us to collect the following information from each machine:
 
-    • Filebeat plays the role of the logging agent; installed on the machine generating the log files, tailing them,
-      and forwarding the data to either Logstash for more advanced processing or directly into Elasticsearch for indexing.
+    • Filebeat plays the role of the logging agent; installed on the machine generating the log files,
+      tailing them, and forwarding the data to either Logstash for more advanced processing or directly
+      into Elasticsearch for indexing.
       
-    • Metricbeat is used for monitoring server performance within an environment, as well as that of different external
-      services running on them. For example, Metricbeat can be used to monitor and analyze system CPU, memory and load.
+    • Metricbeat is used for monitoring server performance within an environment, as well as that of
+      different external services running on them. For example, Metricbeat can be used to monitor and
+      analyze system CPU, memory and load.
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
@@ -149,10 +151,11 @@ SSH into the control node and follow the steps below:
        [Private IP addresses of webservers] [location of a Python 3 interpreter] -
        (e.g. 'x.x.x.x ansible_python_interpreter=/usr/bin/python3')
 
-    • The 'hosts' field in the Ansible playbook can be edited to specify which machines to run a set of tasks against.
+    • The 'hosts' field in the Ansible playbook can be edited to specify which machines to run a set of
+      tasks against.
 
-    • Run the playbook, and navigate to 'http://[your.ELK-VM.External.IP]:5601/app/kibana' to check that the installation 
-      worked as expected.
+    • Run the playbook, and navigate to 'http://[your.ELK-VM.External.IP]:5601/app/kibana' to check that
+      the installation worked as expected.
 
 To deploy the ELK Stack, Filebeat, and Metricbeat, run the following commands:
    
