@@ -99,15 +99,17 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 
 The playbook implements the following tasks:
 
-    • Configure ELK VM with Docker
+    • Configure Elk VM with Docker
     
     • Install docker.io
     
     • Install pip3
     
+    • Install Docker python module
+    
     • Download and launch a Docker elk container sebp/elk:761
     
-    • Use systemctl to use more memory
+    • Use systemctl to increase memory
     
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
@@ -148,8 +150,6 @@ SSH into the control node and follow the steps below:
      
      • Update the configuration files to include your ELK-SERVER's private IP address: 
        (filebeat-config.yml: lines 1106 & 1806, metricbeat-config.yml: lines 62 & 96)
-      
-     • /etc/ansible/install-elk.yml is the ELK deployment playbook. Copy it to '/etc/ansible'
 
      • /etc/ansible/filebeat-playbook.yml is the Filebeat playbook. Copy it to '/etc/ansible'
 
