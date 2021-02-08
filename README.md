@@ -155,7 +155,8 @@ SSH into the control node and follow the steps below:
 
      • /etc/ansible/metricbeat-playbook.yml is the Metricbeat playbook. Copy it to '/etc/ansible'
 
-     • To make Ansible run the playbook on a specific machine(s), update the '/etc/ansible/hosts' inventory file to include: 
+     • To make Ansible run the playbook on a specific machine(s), update the '/etc/ansible/hosts'
+       inventory file to include: 
 
           [Group name]
           
