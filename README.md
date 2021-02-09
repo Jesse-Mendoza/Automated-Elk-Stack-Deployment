@@ -75,7 +75,7 @@ A summary of the access policies in place can be found in the table below.
 
 | Name       | Publicly Accessible |              Allowed IP Addresses            |
 |------------|---------------------|----------------------------------------------|
-| Jump Box   | No                  | 73.96.160.169                                |
+| Jump Box   | Yes                 | 73.96.160.169                                |
 | Web-1 DVWA | No                  | 10.0.0.4                                     |
 | Web-1 DVWA | No                  | 10.0.0.4                                     |
 | Web-2 DVWA | No                  | 10.0.0.4                                     |
@@ -112,11 +112,11 @@ https://github.com/Jesse-Mendoza/Automated-Elk-Stack-Deployment/blob/main/Images
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
        
-    • Web-1 DVWA // 10.0.0.5 
-    
-    • Web-2 DVWA // 10.0.0.6
-    
-    • Web-3 DVWA // 10.0.0.7
+| Name       | IP Address |
+|------------|------------|
+| Web-1 DVWA | 10.0.0.5   |
+| Web-2 DVWA | 10.0.0.6   |
+| Web-3 DVWA | 10.0.0.7   |
 
 We have installed the following Beats on these machines:
     
