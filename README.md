@@ -69,14 +69,7 @@ Only the Jump Box machine can accept connections from the Internet. Access to th
 
 Machines within the network can only be accessed by the Jump Box.
 
-    • The ELK server may be accessed from Jump Box   // 10.0.0.4
-    
-    • The ELK server may be accessed from Web-1 DVWA // 10.0.0.5    
-    
-    • The ELK server may be accessed from Web-2 DVWA // 10.0.0.6  
-    
-    • The ELK server may be accessed from Web-3 DVWA // 10.0.0.7  
-
+    • The ELK server may be accessed from the Jump Box machine // 10.0.0.4
 
 A summary of the access policies in place can be found in the table below.
 
