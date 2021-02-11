@@ -4,7 +4,7 @@ The files in this repository were used to configure the network depicted below.
 
 https://github.com/Jesse-Mendoza/Automated-Elk-Stack-Deployment/blob/main/Diagrams/RedTeam-Network-Diagram.png
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the Project 1 Red-Team Network Diagram file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the Red-Team Network Diagram file may be used to install only certain pieces of it, such as Filebeat.
 
 https://github.com/Jesse-Mendoza/Automated-Elk-Stack-Deployment/tree/main/Ansible
 
