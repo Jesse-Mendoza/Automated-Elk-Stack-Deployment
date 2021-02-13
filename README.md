@@ -15,8 +15,8 @@ This document contains the following details:
     • Access Policies
     
     • ELK Configuration
-        - Beats in Use
-        - Machines Being Monitored
+        ⚬ Beats in Use
+        ⚬ Machines Being Monitored
     
     • How to Use the Ansible Build
 
@@ -139,7 +139,7 @@ In order to use the playbook, you will need to have an Ansible control node alre
 
 SSH into the control node and follow the steps below:
 
-     • Copy the Filebeat and Metricbeat configuration files to '/etc/ansible'
+     • Copy the Filebeat and Metricbeat configuration files to '/etc/ansible/'
      
      • Update the configuration files to include your ELK-SERVER's private IP address: 
        (filebeat-config.yml: lines 1106 & 1806, metricbeat-config.yml: lines 62 & 96)
